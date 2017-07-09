@@ -8,7 +8,7 @@ class DAO {
     public function connect() {
         $servername = "localhost";
         $dbusername = "root";
-        $dbpassword = "MathRules315";
+        $dbpassword = "password";
         $dbname = "currConverter";
 
         $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
