@@ -1,19 +1,20 @@
 <!doctype html>
 <html lan="en">
+
 <head>
     <!-- required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-e">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- title -->
     <title>Currency Converter</title>
-    
+
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
-    
+
 <body>
     <?php 
     
@@ -32,14 +33,13 @@
             return round($converted, 2);
         }
     ?>
-
     <h1></h1>
     <section id="header">
         <div id="header-box" class="center">
             <h1>Daily Finance Blog</h1>
         </div>
     </section>
-    
+
     <section id="selection">
         <div id="selection-title">
             <h2>Currency Converter</h2>
@@ -48,11 +48,19 @@
             <form name="main" method="post" action="">
                 <table style="width:50%">
                     <tr>
-                        <td><h3>From</h3></td>
-                        <td><h3>Amount</h3></td>
-                        <td><h3>To</h3></td>
+                        <td>
+                            <h3>From</h3>
+                        </td>
+                        <td>
+                            <h3>Amount</h3>
+                        </td>
+                        <td>
+                            <h3>To</h3>
+                        </td>
                         <td> </td>
-                        <td><h3>Amount</h3></td>
+                        <td>
+                            <h3>Amount</h3>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -81,7 +89,8 @@
                             </select>
                         </td>
                         <td><input type="submit" name="submitButton" value="Calculate"></td>
-                        <td> <?php 
+                        <td>
+                            <?php 
                                 if(isset($_POST['submitButton'])) {
                                     // retrieve field data
                                     $from   = $_POST['inital_currency'];
@@ -96,14 +105,11 @@
                         </td>
                     </tr>
                 </table>
-                
             </form>
         </div>
-        
     </section>
     <section id="footer">
         <img class="display" src="pictures/bg2.jpg">
     </section>
 </body>
-
 </html>
