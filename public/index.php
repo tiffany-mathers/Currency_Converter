@@ -9,9 +9,6 @@
     <!-- title -->
     <title>Currency Converter</title>
     
-    <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="../public/js/bootstrap/bootstrap.min.js">
-    
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     
