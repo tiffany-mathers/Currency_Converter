@@ -1,0 +1,38 @@
+CREATE TABLE euro (
+id INT(10) PRIMARY KEY,
+date DATE UNIQUE,
+isAccurate BOOLEAN NOT NULL,
+name VARCHAR(20) NOT NULL,
+abbr VARCHAR(3) NOT NULL,
+poundEx DECIMAL(6,5) NOT NULL,
+dollarEx DECIMAL(6,5) NOT NULL
+);
+
+CREATE TABLE dollar (
+id INT(10) PRIMARY KEY,
+date DATE UNIQUE,
+isAccurate BOOLEAN NOT NULL,
+name VARCHAR(20) NOT NULL,
+abbr VARCHAR(3) NOT NULL,
+poundEx DECIMAL(6,5) NOT NULL,
+euroEx DECIMAL(6,5) NOT NULL
+);
+
+CREATE TABLE pound (
+id INT(10) PRIMARY KEY,
+date DATE UNIQUE,
+isAccurate BOOLEAN NOT NULL,
+name VARCHAR(20) NOT NULL,
+abbr VARCHAR(3) NOT NULL,
+euroEx DECIMAL(6,5) NOT NULL,
+dollarEx DECIMAL(6,5) NOT NULL
+);
+
+INSERT INTO euro (id, date, isAccurate, name, abbr, poundEx, dollarEx)
+VALUES (1, '2017-07-09', 1, 'Euro', 'EUR', .88, 1.14);
+
+INSERT INTO dollar (id, date, isAccurate, name, abbr, poundEx, euroEx)
+VALUES (1, '2017-07-09', 1, 'US Dollar', 'USD', .78, .88);
+
+INSERT INTO pound (id, date, isAccurate, name, abbr, euroEx, dollarEx)
+VALUES (1, '2017-07-09', 1, 'Pound', 'GBP', 1.13, 1.29);
