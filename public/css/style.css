@@ -52,13 +52,6 @@ h4{
     padding: 15px;
 }
 
-#footer{
-    height: 100px;
-    width: auto;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
 img.display {
     display: block;
     margin-left: auto;
